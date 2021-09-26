@@ -2,7 +2,6 @@ import {Command} from '@oclif/command'
 import * as sharp from 'sharp'
 import * as path from 'path'
 import createFolder from '../utils/createFolder'
-import * as ora from 'ora'
 
 export default class Single extends Command {
   static description = 'convert a single image to dzi'
@@ -27,17 +26,14 @@ export default class Single extends Command {
 
     await createFolder(outputPath)
 
-    const spinner = ora(`Converting ${inputFile}`).start()
+    console.log(`Converting ${fileName}`)
 
     const dziPath = path.join(outputPath, `${fileName}.dzi`)
 
     try {
       await sharp(args.file, {limitInputPixels: false}).toFile(dziPath)
     } catch (e) {
-      spinner.stop()
       throw e
     }
-
-    spinner.stop()
   }
 }
