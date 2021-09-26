@@ -1,5 +1,5 @@
 {
-  "name": "dzi-utils",
+  "name": "@czbiohub/dzi-utils",
   "description": "Utilities for converting images to the DeepZoom format.",
   "version": "0.1.0",
   "author": "Kyle Awayan",
@@ -43,7 +43,7 @@
   ],
   "homepage": "https://github.com/@czbiohub/dzi-utils",
   "keywords": [],
-  "license": "ISC",
+  "license": "MIT",
   "main": "index.js",
   "oclif": {
     "commands": "./lib/commands",

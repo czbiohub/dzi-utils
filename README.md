@@ -14,11 +14,11 @@ Utilities for converting images to the DeepZoom format.
 
 <!-- usage -->
 ```sh-session
-$ npm install -g dzi-utils
+$ npm install -g @czbiohub/dzi-utils
 $ dzi-utils COMMAND
 running command...
 $ dzi-utils (-v|--version|version)
-dzi-utils/0.1.0 darwin-x64 node-v14.17.3
+@czbiohub/dzi-utils/0.1.0 darwin-x64 node-v14.17.3
 $ dzi-utils --help [COMMAND]
 USAGE
   $ dzi-utils COMMAND
