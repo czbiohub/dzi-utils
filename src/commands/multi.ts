@@ -8,7 +8,7 @@ import * as cliProgress from 'cli-progress'
 export default class Single extends Command {
   static description = 'convert multiple images in a folder to dzi'
 
-  static examples = ['$ dzi-utils multi test.tiff']
+  static examples = ['$ dzi-utils multi test_folder test_out_folder']
 
   static args = [
     {name: 'folder', required: true, description: 'input folder of images'},

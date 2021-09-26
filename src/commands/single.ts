@@ -6,7 +6,7 @@ import createFolder from '../utils/createFolder'
 export default class Single extends Command {
   static description = 'convert a single image to dzi'
 
-  static examples = ['$ dzi-utils single test.tiff']
+  static examples = ['$ dzi-utils single test.tiff test_out_folder']
 
   static args = [
     {name: 'file', required: true, description: 'input file'},
