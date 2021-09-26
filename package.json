@@ -5,7 +5,7 @@
   "bin": {
     "dzi-utils": "./bin/run"
   },
-  "bugs": "https://github.com/@czbiohub/dzi-utils/issues",
+  "bugs": "https://github.com/czbiohub/dzi-utils/issues",
   "dependencies": {
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
