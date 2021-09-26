@@ -1,0 +1,1 @@
+{"version":"0.1.0","commands":{"single":{"id":"single","description":"convert a single image to dzi","pluginName":"dzi-utils","pluginType":"core","aliases":[],"examples":["$ dzi-utils single test.tiff"],"flags":{},"args":[{"name":"file","description":"input file","required":true},{"name":"out","description":"output path (.dzi file with a folder)","required":true}]}}}
