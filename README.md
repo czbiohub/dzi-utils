@@ -1,9 +1,6 @@
 # dzi-utils
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/dzi-utils.svg)](https://npmjs.org/package/dzi-utils)
-[![Downloads/week](https://img.shields.io/npm/dw/dzi-utils.svg)](https://npmjs.org/package/dzi-utils)
-[![License](https://img.shields.io/npm/l/dzi-utils.svg)](https://github.com/@czbiohub/dzi-utils/blob/master/package.json)
 
 Utilities for converting images to the DeepZoom format.
 
