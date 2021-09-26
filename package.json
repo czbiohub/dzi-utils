@@ -40,7 +40,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/@czbiohub/dzi-utils",
+  "homepage": "https://github.com/czbiohub/dzi-utils",
   "keywords": [],
   "license": "MIT",
   "main": "index.js",
