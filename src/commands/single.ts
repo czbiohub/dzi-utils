@@ -35,7 +35,7 @@ export default class Single extends Command {
       await sharp(args.file, {limitInputPixels: false}).toFile(dziPath)
     } catch (e) {
       spinner.stop()
-      console.error(e)
+      throw e
     }
 
     spinner.stop()
