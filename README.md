@@ -18,7 +18,7 @@ $ npm install -g @czbiohub/dzi-utils
 $ dzi-utils COMMAND
 running command...
 $ dzi-utils (-v|--version|version)
-@czbiohub/dzi-utils/0.1.0 darwin-x64 node-v14.17.3
+@czbiohub/dzi-utils/0.1.5 darwin-x64 node-v14.17.3
 $ dzi-utils --help [COMMAND]
 USAGE
   $ dzi-utils COMMAND
@@ -66,7 +66,7 @@ EXAMPLE
   $ dzi-utils multi test_folder test_out_folder
 ```
 
-_See code: [src/commands/multi.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.0/src/commands/multi.ts)_
+_See code: [src/commands/multi.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.5/src/commands/multi.ts)_
 
 ## `dzi-utils single FILE OUT`
 
@@ -84,5 +84,5 @@ EXAMPLE
   $ dzi-utils single test.tiff test_out_folder
 ```
 
-_See code: [src/commands/single.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.0/src/commands/single.ts)_
+_See code: [src/commands/single.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.5/src/commands/single.ts)_
 <!-- commandsstop -->
