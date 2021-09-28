@@ -5,16 +5,14 @@
 Utilities for converting images to the DeepZoom format.
 
 <!-- toc -->
-
-- [dzi-utils](#dzi-utils)
-- [Usage](#usage)
-- [Commands](#commands)
+* [dzi-utils](#dzi-utils)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g @czbiohub/dzi-utils
 $ dzi-utils COMMAND
@@ -26,16 +24,14 @@ USAGE
   $ dzi-utils COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-
-- [`dzi-utils help [COMMAND]`](#dzi-utils-help-command)
-- [`dzi-utils multi FOLDER OUT`](#dzi-utils-multi-folder-out)
-- [`dzi-utils single FILE OUT`](#dzi-utils-single-file-out)
+* [`dzi-utils help [COMMAND]`](#dzi-utils-help-command)
+* [`dzi-utils multi FOLDER OUT`](#dzi-utils-multi-folder-out)
+* [`dzi-utils single FILE OUT`](#dzi-utils-single-file-out)
 
 ## `dzi-utils help [COMMAND]`
 
@@ -89,5 +85,4 @@ EXAMPLE
 ```
 
 _See code: [src/commands/single.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.0/src/commands/single.ts)_
-
 <!-- commandsstop -->
