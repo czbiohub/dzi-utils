@@ -1,7 +1,7 @@
 {
   "name": "@czbiohub/dzi-utils",
   "description": "Utilities for converting images to the DeepZoom format.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "bin": {
     "dzi-utils": "./bin/run"
   },

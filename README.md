@@ -18,7 +18,7 @@ $ npm install -g @czbiohub/dzi-utils
 $ dzi-utils COMMAND
 running command...
 $ dzi-utils (-v|--version|version)
-@czbiohub/dzi-utils/0.1.5 darwin-x64 node-v14.17.3
+@czbiohub/dzi-utils/0.1.6 darwin-x64 node-v14.17.3
 $ dzi-utils --help [COMMAND]
 USAGE
   $ dzi-utils COMMAND
@@ -31,6 +31,7 @@ USAGE
 <!-- commands -->
 * [`dzi-utils help [COMMAND]`](#dzi-utils-help-command)
 * [`dzi-utils multi FOLDER OUT`](#dzi-utils-multi-folder-out)
+* [`dzi-utils portal FOLDER PREFIXURL OUT`](#dzi-utils-portal-folder-prefixurl-out)
 * [`dzi-utils single FILE OUT`](#dzi-utils-single-file-out)
 
 ## `dzi-utils help [COMMAND]`
@@ -66,7 +67,26 @@ EXAMPLE
   $ dzi-utils multi test_folder test_out_folder
 ```
 
-_See code: [src/commands/multi.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.5/src/commands/multi.ts)_
+_See code: [src/commands/multi.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.6/src/commands/multi.ts)_
+
+## `dzi-utils portal FOLDER PREFIXURL OUT`
+
+create a .json file for tabula portals
+
+```
+USAGE
+  $ dzi-utils portal FOLDER PREFIXURL OUT
+
+ARGUMENTS
+  FOLDER     input folder
+  PREFIXURL  prefix url
+  OUT        output path (.json file)
+
+EXAMPLE
+  $ dzi-utils portal test_folder
+```
+
+_See code: [src/commands/portal.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.6/src/commands/portal.ts)_
 
 ## `dzi-utils single FILE OUT`
 
@@ -84,5 +104,5 @@ EXAMPLE
   $ dzi-utils single test.tiff test_out_folder
 ```
 
-_See code: [src/commands/single.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.5/src/commands/single.ts)_
+_See code: [src/commands/single.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.6/src/commands/single.ts)_
 <!-- commandsstop -->
