@@ -11,7 +11,9 @@ interface Category {
 export default class Single extends Command {
   static description = 'create a .json file for tabula portals'
 
-  static examples = ['$ dzi-utils portal test_folder']
+  static examples = [
+    '$ dzi-utils portal test_folder https://example.com/crops/1 out.json',
+  ]
 
   static args = [
     {name: 'folder', required: true, description: 'input folder'},
