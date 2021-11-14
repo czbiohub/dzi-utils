@@ -1,43 +1,20 @@
 import {Command} from '@oclif/command'
 import * as fs from 'fs'
-import * as path from 'path'
 
-async function searchForExt(
-  inputFolder: string,
-  extension: string,
-  finalList: Array<string>
-): Promise<Array<string>> {
-  const filesInFolder = await fs.promises.readdir(inputFolder)
-
-  for (let i = 0; i < filesInFolder.length; i++) {
-    const file = filesInFolder[i]
-    const location = path.join(inputFolder, file)
-
-    // Check if the current file we are looking at
-    // is a file or a folder
-    const stat = await fs.promises.lstat(location)
-    const isFile = stat.isFile()
-
-    if (isFile) {
-      if (path.extname(file) == extension) {
-        finalList.push(file)
-      }
-    } else {
-      searchForExt(location, extension, finalList)
-    }
-  }
-
-  return finalList
+interface Category {
+  name: string
+  prefixUrl: string
+  tileSources: Array<string>
 }
 
 export default class Single extends Command {
   static description =
-    'export csvs to list all dzi files found in a folder, recursively'
+    'export a csv with a list of dzi file names, from a json exported from the "mutli" command'
 
-  static examples = ['$ dzi-utils list test_folder out.csv']
+  static examples = ['$ dzi-utils list test.json out.csv']
 
   static args = [
-    {name: 'folder', required: true, description: 'input folder'},
+    {name: 'jsonFile', required: true, description: 'json file'},
     {
       name: 'out',
       required: true,
@@ -48,14 +25,10 @@ export default class Single extends Command {
   async run() {
     const {args} = this.parse(Single)
 
-    const inputFolder = args.folder
+    const jsonFile = args.jsonFile
     const outputPath = args.out
 
-    // To do: just write straight to the output file
-    // instead of making an array
-    const finalList: Array<string> = []
-
-    await searchForExt(inputFolder, '.dzi', finalList)
+    const jsonData = JSON.parse(fs.readFileSync(jsonFile, 'utf-8'))
 
     // Check if CSV file exists
     fs.stat(outputPath, (err) => {
@@ -67,9 +40,12 @@ export default class Single extends Command {
 
     const csvFile = fs.createWriteStream(outputPath)
 
-    finalList.forEach((line) => {
-      csvFile.write(line)
-      csvFile.write('\n')
+    jsonData.forEach((category: Category) => {
+      category.tileSources.forEach((tileSource) => {
+        const fileName = tileSource.split('/')[tileSource.split('/').length - 1]
+        csvFile.write(fileName)
+        csvFile.write('\n')
+      })
     })
 
     csvFile.close()

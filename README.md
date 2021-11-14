@@ -30,7 +30,7 @@ USAGE
 
 <!-- commands -->
 * [`dzi-utils help [COMMAND]`](#dzi-utils-help-command)
-* [`dzi-utils list FOLDER OUT`](#dzi-utils-list-folder-out)
+* [`dzi-utils list JSONFILE OUT`](#dzi-utils-list-jsonfile-out)
 * [`dzi-utils multi FOLDER OUT`](#dzi-utils-multi-folder-out)
 * [`dzi-utils portal FOLDER PREFIXURL OUT`](#dzi-utils-portal-folder-prefixurl-out)
 * [`dzi-utils single FILE OUT`](#dzi-utils-single-file-out)
@@ -52,20 +52,20 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.3/src/commands/help.ts)_
 
-## `dzi-utils list FOLDER OUT`
+## `dzi-utils list JSONFILE OUT`
 
-export csvs to list all dzi files found in a folder, recursively
+export a csv with a list of dzi file names, from a json exported from the "mutli" command
 
 ```
 USAGE
-  $ dzi-utils list FOLDER OUT
+  $ dzi-utils list JSONFILE OUT
 
 ARGUMENTS
-  FOLDER  input folder
-  OUT     output path (.csv file)
+  JSONFILE  json file
+  OUT       output path (.csv file)
 
 EXAMPLE
-  $ dzi-utils list test_folder out.csv
+  $ dzi-utils list test.json out.csv
 ```
 
 _See code: [src/commands/list.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.6/src/commands/list.ts)_
