@@ -51,6 +51,8 @@ export default class Single extends Command {
     const inputFolder = args.folder
     const outputPath = args.out
 
+    // To do: just write straight to the output file
+    // instead of making an array
     const finalList: Array<string> = []
 
     await searchForExt(inputFolder, '.dzi', finalList)
