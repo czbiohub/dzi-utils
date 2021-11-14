@@ -30,6 +30,7 @@ USAGE
 
 <!-- commands -->
 * [`dzi-utils help [COMMAND]`](#dzi-utils-help-command)
+* [`dzi-utils list FOLDER OUT`](#dzi-utils-list-folder-out)
 * [`dzi-utils multi FOLDER OUT`](#dzi-utils-multi-folder-out)
 * [`dzi-utils portal FOLDER PREFIXURL OUT`](#dzi-utils-portal-folder-prefixurl-out)
 * [`dzi-utils single FILE OUT`](#dzi-utils-single-file-out)
@@ -50,6 +51,24 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.3/src/commands/help.ts)_
+
+## `dzi-utils list FOLDER OUT`
+
+export csvs to list all dzi files found in a folder, recursively
+
+```
+USAGE
+  $ dzi-utils list FOLDER OUT
+
+ARGUMENTS
+  FOLDER  input folder
+  OUT     output path (.csv file)
+
+EXAMPLE
+  $ dzi-utils list test_folder out.csv
+```
+
+_See code: [src/commands/list.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.6/src/commands/list.ts)_
 
 ## `dzi-utils multi FOLDER OUT`
 
@@ -83,7 +102,7 @@ ARGUMENTS
   OUT        output path (.json file)
 
 EXAMPLE
-  $ dzi-utils portal test_folder
+  $ dzi-utils portal test_folder https://example.com/crops/1 out.json
 ```
 
 _See code: [src/commands/portal.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.6/src/commands/portal.ts)_
