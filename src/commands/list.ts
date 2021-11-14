@@ -19,7 +19,7 @@ async function searchForExt(
     const isFile = stat.isFile()
 
     if (isFile) {
-      if (path.extname(file) == '.jpg') {
+      if (path.extname(file) == extension) {
         finalList.push(file)
       }
     } else {
