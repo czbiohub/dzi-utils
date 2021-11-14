@@ -1,5 +1,4 @@
 import {Command} from '@oclif/command'
-import {pbkdf2Sync} from 'crypto'
 import * as fs from 'fs'
 import * as path from 'path'
 
@@ -54,7 +53,7 @@ export default class Single extends Command {
 
     const finalList: Array<string> = []
 
-    await searchForExt(inputFolder, '.jpg', finalList)
+    await searchForExt(inputFolder, '.dzi', finalList)
 
     // Check if CSV file exists
     fs.stat(outputPath, (err) => {
