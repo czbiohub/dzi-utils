@@ -32,6 +32,7 @@ USAGE
 * [`dzi-utils help [COMMAND]`](#dzi-utils-help-command)
 * [`dzi-utils list JSONFILE OUT`](#dzi-utils-list-jsonfile-out)
 * [`dzi-utils multi FOLDER OUT`](#dzi-utils-multi-folder-out)
+* [`dzi-utils multidir FOLDER OUT`](#dzi-utils-multidir-folder-out)
 * [`dzi-utils portal FOLDER PREFIXURL OUT`](#dzi-utils-portal-folder-prefixurl-out)
 * [`dzi-utils single FILE OUT`](#dzi-utils-single-file-out)
 
@@ -87,6 +88,24 @@ EXAMPLE
 ```
 
 _See code: [src/commands/multi.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.6/src/commands/multi.ts)_
+
+## `dzi-utils multidir FOLDER OUT`
+
+run multi command for multiple directories
+
+```
+USAGE
+  $ dzi-utils multidir FOLDER OUT
+
+ARGUMENTS
+  FOLDER  input folder of directories of images
+  OUT     output path (folders of .dzi files)
+
+EXAMPLE
+  $ dzi-utils multidir test_folder test_out_folder
+```
+
+_See code: [src/commands/multidir.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.6/src/commands/multidir.ts)_
 
 ## `dzi-utils portal FOLDER PREFIXURL OUT`
 
