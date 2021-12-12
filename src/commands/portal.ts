@@ -9,14 +9,19 @@ interface Category {
 }
 
 export default class Single extends Command {
-  static description = 'create a .json file for tabula portals'
+  static description =
+    'create a .json file for tabula portals. script will run through multiple dzi directories, so input folder has to contain at least one directory of dzi folders.'
 
   static examples = [
-    '$ dzi-utils portal test_folder https://example.com/crops/1 out.json',
+    '$ dzi-utils portal input_folder_with_dzi_directories https://example.com/crops/1 out.json',
   ]
 
   static args = [
-    {name: 'folder', required: true, description: 'input folder'},
+    {
+      name: 'folder',
+      required: true,
+      description: 'input folder',
+    },
     {
       name: 'prefixUrl',
       required: true,

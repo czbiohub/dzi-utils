@@ -109,7 +109,7 @@ _See code: [src/commands/multidir.ts](https://github.com/czbiohub/dzi-utils/blob
 
 ## `dzi-utils portal FOLDER PREFIXURL OUT`
 
-create a .json file for tabula portals
+create a .json file for tabula portals. script will run through multiple dzi directories, so input folder has to contain at least one directory of dzi folders.
 
 ```
 USAGE
@@ -121,7 +121,7 @@ ARGUMENTS
   OUT        output path (.json file)
 
 EXAMPLE
-  $ dzi-utils portal test_folder https://example.com/crops/1 out.json
+  $ dzi-utils portal input_folder_with_dzi_directories https://example.com/crops/1 out.json
 ```
 
 _See code: [src/commands/portal.ts](https://github.com/czbiohub/dzi-utils/blob/v0.1.6/src/commands/portal.ts)_
