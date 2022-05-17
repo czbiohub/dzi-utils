@@ -71,7 +71,7 @@ export default class Single extends Command {
       filesInFolder.forEach((file) => {
         const fileExtension = file.split('.').pop()
         if (fileExtension == 'dzi') {
-          tempCategory.tileSources.push(categoryPrefixUrl + '/' + file)
+          tempCategory.tileSources.push(file)
         }
       })
 
